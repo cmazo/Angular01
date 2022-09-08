@@ -1,1 +1,41 @@
-<b>listado trabajando!</b>
+<style>
+    h2 {
+    color:fff;
+    font-size: 20px;
+    }
+    social.h2 {
+    color:pink;
+    font-size: 14px;
+    }
+    social.h2.h2color {
+    color:purple;
+    font-size: 10px;
+    }
+    tv.h2 {
+    color:green;
+    font-size: 14px;
+    }
+    tv.h2.h2color {
+    color:orange;
+    font-size: 10px;
+    }
+</style>
+
+<b>Listado de Heroes  !!</b>
+<br>
+
+<ng-container *ngIf="delheroe.length > 0; else elseNoborrado">
+    <h2 style="color: red;">Heroe Borrado:  <small>{{delheroe}}</small></h2>    
+</ng-container>
+<ng-template #elseNoborrado>
+    <h3 style="color: deepskyblue;">No se ha borrado...</h3>
+</ng-template>
+    
+<button (click)="borrarHeroex()">Borrar Heroe</button>
+
+<ul class="social.h2">
+    <li *ngFor="let item of heroex; let i=index">
+         Posicion:{{i}}   -   {{item}}
+    </li>
+</ul>
+

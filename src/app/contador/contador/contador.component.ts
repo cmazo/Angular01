@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
 {
     selector: 'app-contador',
     template: `
-    <h1>{{title}}</h1>
+    <h1>Desde Modulo: {{title}}</h1>
 
     <h1>{{1 + 2}}</h1>
 
@@ -28,7 +28,7 @@ import { Component } from "@angular/core";
 
 export class ContadorComponent
 {
-    title = 'Contador App!!';
+    title = 'Contador App...!!!';
     public numero:number = 10;
     public numbase:number = 5;
   
